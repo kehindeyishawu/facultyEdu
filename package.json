@@ -1,0 +1,17 @@
+{
+  "name": "facultyedu",
+  "version": "1.0.0",
+  "description": "website for lasu faculty of education",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kenny",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.22"
+  }
+}
