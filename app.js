@@ -16,7 +16,7 @@ const indexRoute = require("./routes/index")
 
 const url = process.env.EDU || "mongodb://localhost:27017/faculty_edu";
 // App config
-app.use(express.static(__dirname + "public"));
+app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
 mongoose.connect(url, {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({extended: true}));
