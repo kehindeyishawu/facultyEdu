@@ -132,15 +132,14 @@ body {
 }
 
 .activities:hover{
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.55);
 }
 
 .jumbotron.act{
-  /* background-image: url(https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60); */
-  background-color: rgba(114, 13, 126, 0.9);
+  background: linear-gradient(  rgba(114, 13, 126, 0.45),  rgba(114, 13, 126, 0.45) ), url(https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+  background-size: 100% 100%;
+  /* transition: all 1000ms; */
 }
 
 .logo {
