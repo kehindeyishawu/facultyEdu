@@ -90,7 +90,7 @@ html, body {
 }
 body {
   background: #eee;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif; */
   /* font-size: 14px; */
   color:#000;
@@ -150,4 +150,8 @@ body {
 .jumbotron.act {
   padding-top: 3vh;
   padding-bottom: 3vh;
+}
+
+.nav-link {
+  font-size: 0.9rem;
 }
