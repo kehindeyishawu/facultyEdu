@@ -1,0 +1,49 @@
+<% include ../partials/header %>
+<form action="/register" method="POST">
+    <div class="container">
+            <div class="row justify-content-center">
+                    <div class="col-sm-6">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h1 class="text-center my-5">Create New User</h1>
+                                </div>
+                                
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="firstname">First Name</label>
+                                        <input type="text" name="firstname" class="form-control" placeholder="e.g John">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="lastname">Last Name</label>
+                                        <input type="text" name="lastname" class="form-control" placeholder="e.g Doe">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" name="username" class="form-control" placeholder="username"> 
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="password" class="form-control" placeholder="password"> 
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="confirmpassword" class="form-control" placeholder="confirm password"> 
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <input type="submit" class="btn btn-block btn-primary"> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
+        </div>
+</form>
+
+
+<% include ../partials/footer %>
