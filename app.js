@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // *****************
 
 // using routes
-app.use("/", indexRoute)
+app.use(indexRoute);
 // *********************
 
 app.listen(port, hostname, () => {
