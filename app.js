@@ -26,6 +26,8 @@ const url = process.env.EDU || "mongodb://localhost:27017/faculty_edu";
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
 mongoose.connect(url, {useNewUrlParser: true});
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 app.use(bodyParser.urlencoded({extended: true}));
 // *****************
 

@@ -31,6 +31,28 @@
   }
 }
 
+@-moz-keyframes imageAnimation {
+  0%{
+    background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+  }
+
+  25%{
+    background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+  }
+
+  50%{
+    background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+  }
+
+  75%{
+    background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+  }
+
+  100%{
+    background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+  }
+}
+
 @keyframes imageAnimation {
   0%{
     background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
@@ -201,3 +223,9 @@ body {
   border-top-right-radius: 0;
 }
 /* ************************************** */
+/* password validation */
+.confirm-password:focus:invalid {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+/* **************************** */

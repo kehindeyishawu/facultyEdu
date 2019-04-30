@@ -1,6 +1,8 @@
 const activity = document.querySelector(".jumbotron.act")
 let act = Array.from(document.querySelectorAll(".activities"));
 let glow = Array.from(document.querySelectorAll(".card.glow"));
+const password = document.querySelector(".password");
+const confirmPassword = document.querySelector(".confirm-password");
 
 const actImage = {
     action : "linear-gradient(  rgba(114, 13, 126, 0.45),  rgba(114, 13, 126, 0.45) ), url(https://images.unsplash.com/photo-1495995424756-6a5a3f9e7543?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)",
@@ -35,3 +37,11 @@ glow.forEach((e, i, a) => {
         e.style.boxShadow = " none";
     })
 })
+
+// password Validation
+confirmPassword.addEventListener("keyup", () => {
+    if(confirmPassword.value !== password.value){
+        confirmPassword.setAttribute("pattern", password.value)
+    }
+})
+// *************************************
