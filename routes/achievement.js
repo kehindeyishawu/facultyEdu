@@ -27,30 +27,30 @@ cloudinary.config({
 // *******************************************
 
 //CREATE - add new campground to DB
-router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, res) {
-  cloudinary.v2.uploader.upload(req.file.path, function(err, result) {
-    if(err) {
-      req.flash('error', err.message);
-      return res.redirect('back');
-    }
-    // add cloudinary url for the image to the campground object under image property
-    req.body.campground.image = result.secure_url;
-    // add image's public_id to campground object
-    req.body.campground.imageId = result.public_id;
-    // add author to campground
-    req.body.campground.author = {
-      id: req.user._id,
-      username: req.user.username
-    }
-    Campground.create(req.body.campground, function(err, campground) {
-      if (err) {
-        req.flash('error', err.message);
-        return res.redirect('back');
-      }
-      res.redirect('/campgrounds/' + campground.id);
-    });
-  });
-});
+// router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, res) {
+//   cloudinary.v2.uploader.upload(req.file.path, function(err, result) {
+//     if(err) {
+//       req.flash('error', err.message);
+//       return res.redirect('back');
+//     }
+//     // add cloudinary url for the image to the campground object under image property
+//     req.body.campground.image = result.secure_url;
+//     // add image's public_id to campground object
+//     req.body.campground.imageId = result.public_id;
+//     // add author to campground
+//     req.body.campground.author = {
+//       id: req.user._id,
+//       username: req.user.username
+//     }
+//     Campground.create(req.body.campground, function(err, campground) {
+//       if (err) {
+//         req.flash('error', err.message);
+//         return res.redirect('back');
+//       }
+//       res.redirect('/campgrounds/' + campground.id);
+//     });
+//   });
+// });
 
 
 // *******************************88
