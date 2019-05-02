@@ -2,13 +2,13 @@
   "name": "facultyedu",
   "version": "1.0.0",
   "description": "website for lasu faculty of education",
+  "engines": {
+    "node": "10.15.3"
+  },
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "engines": {
-    "node": "8.11.1"
   },
   "author": "kenny",
   "license": "ISC",
