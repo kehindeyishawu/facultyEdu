@@ -1,23 +1,33 @@
 // requiring index
 // const http = require('http');
-const hostname = process.env.IP || '127.0.0.1';
-const port =  process.env.PORT || 3000;
+const hostname                    = process.env.IP || '127.0.0.1';
+const port                        =  process.env.PORT || 3000;
 
-const express = require("express");
-const app       =   express();
-const methodOverride       =   require("method-override");
-const bodyParser  = require("body-parser");
-const mongoose    = require("mongoose");
-const passport    = require("passport");
-const LocalStrategy    = require("passport-local");
-const passportLocalMongoose    = require("passport-local-mongoose");
-const flash = require("connect-flash");
+const express                     = require("express");
+const app                         =   express();
+const methodOverride              =   require("method-override");
+const bodyParser                  = require("body-parser");
+const mongoose                    = require("mongoose");
+const passport                    = require("passport");
+const LocalStrategy               = require("passport-local");
+const passportLocalMongoose       = require("passport-local-mongoose");
+const flash                       = require("connect-flash");
+// requiring and configing dotenv
+const dotenv                      = require('dotenv')
+const result = dotenv.config()
+ 
+if (result.error) {
+  throw result.error
+}
+ 
+console.log(result.parsed)
 // ********************************
 // REQUIRING MODELS
 const User = require("./models/user")
 // *************************
 // requiring routes
 const indexRoute = require("./routes/index")
+const achievementRoute = require("./routes/achievement")
 
 // ***********************************
 
@@ -55,6 +65,7 @@ app.use(function(req, res, next){
 
 // using routes
 app.use(indexRoute);
+app.use(achievementRoute);
 // *********************
 
 app.listen(port, hostname, () => {
