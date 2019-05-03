@@ -66,6 +66,7 @@ app.use(function(req, res, next){
 // using routes
 app.use(indexRoute);
 app.use(achievementRoute);
+// app.use(newsRoute)
 // *********************
 
 app.listen(port, hostname, () => {
