@@ -1,22 +1,31 @@
-<% include ../partials/header %>
-
-<div class="container">
-    <div class="row">
-        <% achievement.forEach((e) => { %>
-            <div class="col-md-4 col-lg-3 col-sm-6 mb-4">
-                <div class="card glow">
-                    <img src="<%= e.image %>" class="card-img-top" alt="Achievement Image">
-                    <div class="card-body">
-                        <h5 class="card-title"><%= e.name %></h5>
-                        <p class="card-text"><%= e.description %></p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+<% include ../partials/header2 %>
+<div class="main bg-white">
+        <div class="container">
+                <div class="jumbotron mt-4">
+                    <div class="container">
+                            <h1 class="display-4">The Faculty Achievements</h1>
+                            <p class="" style="font-size: 30px;">We Promise You Will Do What You Love</p>
+                            <a class="btn btn-info text-white">Add New Post</a>
                     </div>
                 </div>
-            </div>    
-        <% }) %>
-    </div>
+                <div class="row">
+                    <% achievement.forEach((e) => { %>
+                        <div class="col-md-4 col-lg-3 col-sm-6 mb-4">
+                            <div class="card shadow">
+                                <img src="<%= e.image %>" class="card-img-top" alt="Achievement Image">
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= e.name %></h5>
+                                    <p class="card-text"><%= e.description %></p>
+                                    <a href="#" class="btn btn-primary">Read More</a>
+                                </div>
+                            </div>
+                        </div>    
+                    <% }) %>
+                </div>
+            </div>
 </div>
 
 
 
-<% include ../partials/footer %>
+
+<% include ../partials/footer2 %>

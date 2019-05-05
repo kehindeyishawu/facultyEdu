@@ -111,12 +111,14 @@ html, body {
   height: 100%;
 }
 body {
-  background: #eee;
   font-family: 'Open Sans', sans-serif;
   /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif; */
   color:#000;
   margin: 0;
   padding: 0;
+}
+.gray-color{
+  background: #eee;
 }
 .swiper-container {
   width: 100%;

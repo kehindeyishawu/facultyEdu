@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- additional links -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/logo.jpg">
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/stylesheet/main.css">
+    <title>Faculty Of Education</title>
+  </head>
+  <body>
+    <div id="wrapper" class="">
+    <header>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light  sticky-top">
+            <a class="navbar-brand" href="#"><img class="logo d-none d-xl-inline" src="/assets/logo.jpg" alt="Faculty logo">
+              
+              Faculty Of Education
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!-- <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+              </ul> -->
+              <ul class="navbar-nav ml-auto mr-5 my-lg-0">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="/"  >Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/about"  >About</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/faculty"  >Faculty Info</a>
+                  </li>
+                  <% if(currentUser) { %>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i> <%= currentUser.username %>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="#">Create Activities</a>
+                        <a class="dropdown-item" href="#">Create News</a>
+                        <a class="dropdown-item" href="/login">Change User</a>
+                        <a class="dropdown-item" href="/register">Create new user</a>
+                        <a class="dropdown-item" href="/logout">logout</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="">Authorities</a>
+                    </li>
+                  <% } else{ %>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/register"  >Register</a>
+                    </li>
+                  <% }%>
+                  <!-- <li class="nav-item">
+                      <a class="nav-link" href="/login"  >Authority</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/register"  >Register</a>
+                  </li> -->
+              </ul>
+            </div>
+          </nav>
+
+          
+              <% if(error && error.length>0) { %>
+                <div class="alert alert-danger text-center mb-0" role="alert">
+                   <%= error %>
+                </div>
+              <% } %>
+              <% if(success && success.length>0) { %>
+                <div class="alert alert-success text-center mb-0" role="alert">
+                     <%= success %>
+                </div>
+              <% } %>
+          
+    </header>
