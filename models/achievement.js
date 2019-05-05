@@ -4,7 +4,7 @@ let AchievementSchema = new mongoose.Schema({
     name: String,
     image: String,
     imageID: String,
-    desc: String,
+    description: String,
     date: {type: Date, default: Date.now},
     headImg: {type: String, default:""},
     CreatedBy: String,

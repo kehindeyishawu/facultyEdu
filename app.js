@@ -16,11 +16,11 @@ const flash                       = require("connect-flash");
 const dotenv                      = require('dotenv')
 const result = dotenv.config()
  
-if (result.error) {
-  throw result.error
-}
+// if (result.error) {
+//   throw result.error
+// }
  
-console.log(result.parsed)
+// console.log(result.parsed)
 // ********************************
 // REQUIRING MODELS
 const User = require("./models/user")
