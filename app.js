@@ -13,8 +13,8 @@ const LocalStrategy               = require("passport-local");
 const passportLocalMongoose       = require("passport-local-mongoose");
 const flash                       = require("connect-flash");
 // requiring and configing dotenv
-const dotenv                      = require('dotenv')
-const result = dotenv.config()
+// const dotenv                      = require('dotenv')
+// const result = dotenv.config()
  
 // if (result.error) {
 //   throw result.error
