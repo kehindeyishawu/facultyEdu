@@ -1,3 +1,7 @@
+html{
+scroll-behavior: smooth;
+}
+
 .jumbotron.text-light {
   padding-top: 30vh;
   padding-bottom: 30vh;
@@ -5,73 +9,48 @@
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  animation: imageAnimation 35s ease-in 0.5s infinite;
-  /* animation-delay: 0.5s; */
+  animation: imageAnimation 18s ease-in 0.5s infinite;
 }
 
 @-webkit-keyframes imageAnimation {
-  0%{
-    background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+  0% {
+    background-image: url(../assets/books.jpg);
   }
 
-  25%{
-    background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+  50% {
+    background-image: url(../assets/school.jpg);
   }
 
-  50%{
-    background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
-  }
-
-  75%{
-    background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
-  }
-
-  100%{
-    background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+  100% {
+    background-image: url(../assets/woman.jpg);
   }
 }
 
 @-moz-keyframes imageAnimation {
-  0%{
-    background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+  0% {
+    background-image: url(../assets/books.jpg);
   }
 
-  25%{
-    background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+  50% {
+    background-image: url(../assets/school.jpg);
   }
 
-  50%{
-    background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
-  }
-
-  75%{
-    background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
-  }
-
-  100%{
-    background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+  100% {
+    background-image: url(../assets/woman.jpg);
   }
 }
 
 @keyframes imageAnimation {
   0%{
-    background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
-  }
-
-  25%{
-    background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+    background-image: url(../assets/books.jpg);
   }
 
   50%{
-    background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
-  }
-
-  75%{
-    background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+    background-image: url(../assets/school.jpg);
   }
 
   100%{
-    background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+    background-image: url(../assets/woman.jpg);
   }
 }
 

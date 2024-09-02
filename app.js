@@ -1,3 +1,10 @@
+// requiring and configing dotenv
+require("dotenv").config()
+// const result = dotenv.config()
+ 
+ 
+
+
 // requiring index
 // const http = require('http');
 const hostname                    = process.env.IP || '127.0.0.1';
@@ -12,15 +19,6 @@ const passport                    = require("passport");
 const LocalStrategy               = require("passport-local");
 const passportLocalMongoose       = require("passport-local-mongoose");
 const flash                       = require("connect-flash");
-// requiring and configing dotenv
-// const dotenv                      = require('dotenv')
-// const result = dotenv.config()
- 
-// if (result.error) {
-//   throw result.error
-// }
- 
-// console.log(result.parsed)
 // ********************************
 // REQUIRING MODELS
 const User = require("./models/user")
@@ -31,11 +29,10 @@ const achievementRoute = require("./routes/achievement")
 
 // ***********************************
 
-const url = process.env.EDU || "mongodb://localhost:27017/faculty_edu";
 // App config
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
-mongoose.connect(url, {useNewUrlParser: true});
+mongoose.connect(process.env.DB, {useNewUrlParser: true});
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 app.use(bodyParser.urlencoded({extended: true}));
