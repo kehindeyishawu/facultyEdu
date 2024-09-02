@@ -1,9 +1,5 @@
 // requiring and configing dotenv
 require("dotenv").config()
-// const result = dotenv.config()
- 
- 
-
 
 // requiring index
 // const http = require('http');
@@ -32,9 +28,12 @@ const achievementRoute = require("./routes/achievement")
 // App config
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
-mongoose.connect(process.env.DB, {useNewUrlParser: true});
-mongoose.set('useFindAndModify', false);
-mongoose.set('useCreateIndex', true);
+mongoose.connect(process.env.DB, {
+  useNewUrlParser: true,
+  useFindAndModify: false,
+  useCreateIndex: true
+})
+
 app.use(bodyParser.urlencoded({extended: true}));
 // *****************
 
