@@ -64,5 +64,5 @@ app.use(achievementRoute);
 // *********************
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+  console.log(`Server running on port ${process.env.PORT || 3000}`);
   });
