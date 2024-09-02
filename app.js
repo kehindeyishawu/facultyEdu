@@ -62,7 +62,7 @@ app.use(indexRoute);
 app.use(achievementRoute);
 // app.use(newsRoute)
 // *********************
-
-app.listen(process.env.PORT || 3000, () => {
-  console.log(`Server running on port ${process.env.PORT || 3000}`);
+let port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
   });
