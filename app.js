@@ -3,9 +3,6 @@ require("dotenv").config()
 
 // requiring index
 // const http = require('http');
-const hostname                    = process.env.IP || '127.0.0.1';
-const port                        =  process.env.PORT || 3000;
-
 const express                     = require("express");
 const app                         =   express();
 const methodOverride              =   require("method-override");
@@ -31,7 +28,8 @@ app.set("view engine", "ejs");
 mongoose.connect(process.env.DB, {
   useNewUrlParser: true,
   useFindAndModify: false,
-  useCreateIndex: true
+  useCreateIndex: true,
+  useUnifiedTopology: true
 })
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -65,6 +63,6 @@ app.use(achievementRoute);
 // app.use(newsRoute)
 // *********************
 
-app.listen(port, hostname, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
   });
